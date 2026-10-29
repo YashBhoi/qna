@@ -21,10 +21,11 @@
            padding: 10px 14px; background: var(--panel); border-bottom: 1px solid var(--border); }
   h1 { font-size: 16px; margin: 0 8px 0 0; }
   .group { display: flex; gap: 6px; }
-  button, label.btn { font: inherit; font-size: 14px; padding: 7px 12px; border-radius: 8px;
+  button, label.btn, a.btn { font: inherit; font-size: 14px; padding: 7px 12px; border-radius: 8px;
            border: 1px solid var(--border); background: var(--panel); color: var(--text);
            cursor: pointer; }
-  button:hover, label.btn:hover { border-color: var(--accent); }
+  a.btn { text-decoration: none; display: inline-block; }
+  button:hover, label.btn:hover, a.btn:hover { border-color: var(--accent); }
   button.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
   .spacer { flex: 1; }
   main { flex: 1; min-height: 0; display: grid; gap: 10px; padding: 10px; }
@@ -55,6 +56,8 @@
   <div class="spacer"></div>
   <label class="btn">Open PDF 1…<input type="file" accept="application/pdf" data-target="1"></label>
   <label class="btn">Open PDF 2…<input type="file" accept="application/pdf" data-target="2"></label>
+  <!-- EDIT: change file.zip to the exact name of your zip file (same folder as this page) -->
+  <a class="btn" id="zipBtn" href="file.zip" download>⬇ Download ZIP</a>
 </header>
 
 <main id="main" class="split">
